@@ -150,7 +150,24 @@ header {
     }
 
     .temp {
+      display: flex;
+      align-items: center;
       font-size: 10px;
+
+      .icon-holder {
+        img {
+          max-width: 20px;
+        }
+      }
+    }
+
+    .time {
+      *:not(span) {
+        display: none;
+      }
+      span {
+        font-size: 14px;
+      }
     }
   }
 }
