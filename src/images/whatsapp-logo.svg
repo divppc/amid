@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.9;
+      }
+    </style>
+  </defs>
+  <image id="whatsapp-logo" class="cls-1" width="20" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAB6klEQVQ4jY3US4iOYRQH8J/LuDSYcYkIs1GTYkFkQ26zQShFkpSNlFlQmET2bJSFrZ0ibJRGIURKFCHJLZdGSFm4i3Sm89bj6/vG96+37/3O+T//5zzv+Z9nkMaYhFVYgA4MxSc8xCVcx5/a1fUEx6AHm9GCz3iNr5iIacl7goO4OkBRZuAm+nASi1K0xBR041Hy9jUorH/nu3iO1QPtmhiLEym6vzY5GOfwCgubEKvQUoguKxNrM7i7iG3FUQz7j2h7Hv9aFtaPqO4BWvP/nNwgnvVNVLojuUtCcRzm4gK+JGF2Qd7QhODZ/O0Kwc7s0q2C8Kx4P92E4Fu8wcwQbMvg+4IQ1rmX77+aEKzWt4Xgtwy0FsmYgJ1p5kOYV+TCh6PqCEZhP0PwZQY6awiPsT27fCYdMAvncRt7CtOPwFS8qBbfwcUGR1mcDuir87QnZ2XmNlWLejKwvIFoTMWuYixjtvdmLhrai6dFP0xI4vEGgiU68gKpsK3OUFiawS1NCJbYmHbprZ2oI3mM6GAXDmMdhjQQmo5jWcRljK8Scf5Qvo/h6bnSPu9yQXyf75iM+fmEQ07hQN6Z/YhbOLo4Gj9wI20Rg74iq4xZDl6FD3lXxveO7v+DqHANfuNKMcsl4gRR2Uh8TMH6wF9gx2qIy7L8HwAAAABJRU5ErkJggg=="/>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="19.5" viewBox="0 0 17 19.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #1b232a;
+        stroke-width: 1px;
+      }
+
+      .cls-2 {
+        font-size: 14px;
+        fill: #1b232a;
+        font-family: Barlow;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="8.5" cy="11" r="8"/>
+  <text id="_" data-name="√" class="cls-2" x="5.506" y="11.029">√</text>
+</svg>

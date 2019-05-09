@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="36" viewBox="0 0 43 36">
+  <defs>
+    <style>
+      .cls-1 {
+        mix-blend-mode: saturation;
+      }
+    </style>
+  </defs>
+  <image id="amid-icon-header" class="cls-1" width="43" height="36" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAkCAYAAAAQC8MVAAABQElEQVRYhe3Yu0rEQBSA4d+wjQjecBFcFERQ2EYtRC0sLGzdatcq5T6A72BnIdimTGUqRfEtRC1tVgSxsFNbCxmIcJgky1ocmcD5i5DJZeYrEgIZa620KWkB6AKbwDIwJS75AvbE+AzYL5vE6wk4EocugLV8/xv4BAbAA3Dbj3sDfwIfuwScA4fuXMWiH8C0GF8CnRGwj8CGGDvU+pDrr4Djftx7/j0QiZNbwH2+cBX0P3OOuyTNtn1sE7gGZgNAymaAmyTNFhHYE2A+CF6xOeCUHOuevzgwoF83SbOWwx4A42HZCjlnx212AoNVteuwq2HaCrWjgF8sv2aUv211aDLyPgxBVxsohlXMsFrVCduoE3bCHgOtDKuVYbUyrFaG1cqwWhlWK8Nq1QBe/zi5+50uewdeRrjvrWQs/6APD/gBfAQnt54oXdgAAAAASUVORK5CYII="/>
+</svg>
