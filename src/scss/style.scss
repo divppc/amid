@@ -69,7 +69,10 @@ img {
 }
 
 .red-btn {
-  a {
+  a,
+  button {
+    outline: none;
+    cursor: pointer;
     font-family: $b;
     font-size: 15px;
     text-transform: uppercase;
@@ -105,6 +108,7 @@ header {
 
   .logo-wrapper {
     font-family: $b;
+    min-width: 74px;
 
     .logo + a {
       text-decoration: underline;
@@ -119,6 +123,12 @@ header {
         text-decoration: none;
       }
     }
+  }
+
+  .title {
+    font-size: 24px;
+    font-family: $r;
+    font-weight: 700;
   }
 
   .location-wrapper {
@@ -368,5 +378,119 @@ footer {
       display: block;
       transform: rotate(-90deg);
     }
+  }
+}
+
+section.form {
+  padding: 115px 0 150px 0;
+  max-width: 405px;
+  margin: 0 auto;
+
+  .row {
+    &:not(:last-child) {
+      margin-bottom: 17px;
+    }
+
+    &:first-child {
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        &:first-child {
+          margin-right: 17px;
+        }
+      }
+    }
+  }
+
+  input:not([type="checkbox"]),
+  textarea {
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+    border-width: 1px;
+    border-color: rgb(196, 199, 200);
+    border-style: solid;
+    border-radius: 10px;
+    height: 42px;
+    line-height: 43px;
+    color: #1b232a;
+    padding: 0 15px;
+
+    &::-webkit-input-placeholder {
+      color: #828a8f;
+    }
+
+    &:focus {
+      border-color: rgb(27, 35, 42);
+    }
+  }
+
+  textarea {
+    min-height: 182px;
+    resize: none;
+    outline: none;
+  }
+
+  .disclaimer {
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 20px;
+    color: #1b232a;
+    padding: 3px 0 10px;
+  }
+
+  .agreement {
+    display: flex;
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    input {
+      opacity: 0;
+
+      &:checked {
+        & + label {
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    label {
+      position: relative;
+      padding-left: 7px;
+
+      &:before {
+        display: block;
+        width: 16px;
+        content: "";
+        height: 16px;
+        position: absolute;
+        border-radius: 50%;
+        top: 2px;
+        left: -20px;
+        border: 1px solid #000;
+      }
+
+      &:after {
+        display: block;
+        content: "√";
+        position: absolute;
+        top: -1px;
+        font-size: 16px;
+        opacity: 0;
+        left: -16px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .red-btn {
+    text-align: center;
+    margin-top: 40px;
   }
 }
