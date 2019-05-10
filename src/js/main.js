@@ -8,6 +8,11 @@ window.addEventListener("load", () => {
       const SendData = new FormData(form);
       const http = new XMLHttpRequest();
       http.open("POST", "form.php", true);
+      http.onreadystatechange = () => {
+        if (http.readyState == 4 && http.status == 200) {
+          location.href = "/";
+        }
+      };
       http.send(SendData);
     });
 
