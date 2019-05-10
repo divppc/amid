@@ -1,3 +1,23 @@
+window.addEventListener("load", () => {
+  document.querySelector(".time") && getWeather();
+  const form = document.getElementsByTagName("form")[0];
+
+  form &&
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const SendData = new FormData(form);
+      const http = new XMLHttpRequest();
+      http.open("POST", "form.php", true);
+      http.send(SendData);
+    });
+
+  const topBtn = document.querySelector(".top-btn span");
+  topBtn &&
+    topBtn.addEventListener("click", () => {
+      window.scroll({ top: 0, left: 0, behavior: "smooth" });
+    });
+});
+
 const getWeather = async () => {
   const w = fetch(
     "http://api.openweathermap.org/data/2.5/find?q=Beirut&units=metric&appid=9da32aaafbf99f43f7d52b9381cd91c5"
@@ -20,5 +40,3 @@ const setWeather = (temp, icon) => {
     dash && dash.remove();
   }, 100);
 };
-
-getWeather();
