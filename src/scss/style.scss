@@ -174,14 +174,31 @@ header {
 
 section.main {
   margin-top: 45px;
-  background: url(../images/amid-bg.svg) calc(80% + 124px) top/265% no-repeat;
+  position: relative;
 
-  @media (min-width: $mobile) {
-    background: url(../images/amid-bg.svg) calc(80% + 124px) top/cover no-repeat;
+  &:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    content: "";
+    background: url(../images/amid-bg.svg) calc(80% + 124px) top/265% no-repeat;
+
+    @media (min-width: $mobile) {
+      background: url(../images/amid-bg.svg) calc(80% + 124px) top/cover
+        no-repeat;
+    }
+
+    @media (min-width: $laptop) {
+      background: url(../images/amid-bg.svg) left top/cover no-repeat;
+    }
   }
 
-  @media (min-width: $laptop) {
-    background: url(../images/amid-bg.svg) left top/cover no-repeat;
+  .container {
+    position: relative;
   }
 
   .main-content {
@@ -525,5 +542,95 @@ section.privacy {
     font-size: 20px;
     padding: 105px 0 135px 0;
     line-height: 28px;
+  }
+}
+
+html {
+  &[dir="rtl"] {
+    * {
+      font-family: $d;
+    }
+
+    header {
+      .logo-wrapper {
+        .logo + a {
+          padding-left: 0;
+          padding-right: 15px;
+        }
+      }
+
+      .location-wrapper {
+        & > div {
+          &:not(:last-child) {
+            border-right: 0;
+          }
+          &:not(:first-child) {
+            border-right: 1px solid #000;
+          }
+        }
+      }
+
+      .icon-holder {
+        order: 1;
+      }
+    }
+
+    section.main {
+      &:after {
+        transform: scaleX(-1);
+        right: 0;
+        left: -1px;
+      }
+
+      h1 {
+        font-family: $db;
+        max-width: 220px;
+
+        @media (min-width: $mobile) {
+          max-width: 290px;
+        }
+      }
+
+      .chat {
+        .whatsapp {
+          span {
+            padding-left: 0;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+
+    footer {
+      @media (min-width: $tablet) {
+        text-align: right;
+      }
+
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-right: 0;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .top-btn {
+      span {
+        i {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    .adv span {
+      font-size: 16px;
+      font-family: $db;
+    }
+
+    .red-btn a {
+      font-family: $db;
+    }
   }
 }

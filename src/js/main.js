@@ -14,8 +14,11 @@ const setWeather = (temp, icon) => {
   const iconHolder = document.querySelector(".icon-holder");
   tempHolder.innerHTML = `${temp} ° C`;
   iconHolder.innerHTML = `<img src="http://openweathermap.org/img/w/${icon}.png" />`;
+  setTimeout(() => {
+    const dash = document.querySelector(".time").childNodes[2];
 
-  document.querySelector(".time").childNodes[2].remove();
+    dash && dash.remove();
+  }, 100);
 };
 
 getWeather();
