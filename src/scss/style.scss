@@ -616,6 +616,21 @@ html {
       }
     }
 
+    section.form {
+      form {
+        .row {
+          &:first-child {
+            input {
+              &:first-child {
+                margin-right: 0;
+                margin-left: 17px;
+              }
+            }
+          }
+        }
+      }
+    }
+
     .top-btn {
       span {
         i {
