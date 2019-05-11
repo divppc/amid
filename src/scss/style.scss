@@ -258,33 +258,62 @@ section.main {
   }
 }
 
+.slick-track {
+  display: flex !important;
+  align-items: flex-end;
+}
+
 .advantages {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background: #1b232a;
+  margin-right: -10px;
+  margin-left: -10px;
+  min-height: 198px;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    display: flex;
+    background: transparent;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .adv {
     border-radius: 3px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-    max-width: 281px;
-    display: flex;
+    min-height: 145px;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
     color: #000;
-    transition: 0.3s;
+    transition: 0.5s;
+    outline: none;
     cursor: pointer;
+    margin: 0 5px;
 
     &:hover {
-      background: #ff0038;
-      color: #fff;
+      @media (min-width: 768px) {
+        background: #ff0038;
+        color: #fff;
+        min-height: 198px;
+      }
     }
 
     @media (min-width: $laptop) {
       width: 281px;
       padding: 0 46px;
       height: 242px;
+    }
+
+    &:not(.slick-center) {
+      margin-top: 43px;
+    }
+
+    &.slick-center {
+      background: #ff0038;
+      color: #fff;
+      min-height: 198px;
     }
 
     span {

@@ -21,6 +21,21 @@ window.addEventListener("load", () => {
     topBtn.addEventListener("click", () => {
       window.scroll({ top: 0, left: 0, behavior: "smooth" });
     });
+
+  $(".advantages").slick({
+    mobileFirst: true,
+    centerMode: true,
+    arrows: false,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: "unslick"
+      }
+    ]
+  });
 });
 
 const getWeather = async () => {
