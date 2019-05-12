@@ -78,12 +78,16 @@ img {
     text-transform: uppercase;
     color: #fff;
     line-height: 51px;
-    padding: 0 32px;
+    padding: 0 15px;
     min-height: 51px;
     font-weight: 700;
     background-color: rgb(255, 0, 56);
     border-radius: 25px;
     display: inline-block;
+
+    @media (min-width: $mobile) {
+      padding: 0 32px;
+    }
 
     &:hover {
       opacity: 0.8;
@@ -134,7 +138,7 @@ header {
   .location-wrapper {
     & > div {
       min-height: 36px;
-      padding: 0 15px;
+      padding: 0 10px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -143,6 +147,10 @@ header {
 
       &:not(:last-child) {
         border-right: 1px solid #000;
+      }
+
+      @media (min-width: $tablet) {
+        padding: 0 15px;
       }
     }
     .city {
@@ -277,6 +285,14 @@ section.main {
     justify-content: space-between;
   }
 
+  // &:not([dir="rtl"]) {
+  //   .adv {
+  //     display: flex !important;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //   }
+  // }
+
   .adv {
     border-radius: 3px;
     background-color: rgb(255, 255, 255);
@@ -300,10 +316,23 @@ section.main {
       }
     }
 
+    @media (min-width: $tablet) {
+      width: 30%;
+      margin: 0;
+    }
+
     @media (min-width: $laptop) {
       width: 281px;
       padding: 0 46px;
       height: 242px;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      @media (min-width: $tablet) {
+        display: none !important;
+      }
     }
 
     &:not(.slick-center) {
@@ -677,4 +706,10 @@ html {
       font-family: $db;
     }
   }
+}
+
+html[dir="rtl"] .slick-slider .slick-track,
+html[dir="rtl"] .slick-slider .slick-list {
+  direction: ltr;
+  overflow: hidden;
 }

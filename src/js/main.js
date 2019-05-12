@@ -26,8 +26,7 @@ window.addEventListener("load", () => {
     mobileFirst: true,
     centerMode: true,
     arrows: false,
-    infinite: true,
-    centerPadding: "60px",
+    centerPadding: "10%",
     slidesToShow: 1,
     responsive: [
       {
