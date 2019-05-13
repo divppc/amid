@@ -7,13 +7,28 @@ window.addEventListener("load", () => {
       e.preventDefault();
       const SendData = new FormData(form);
       const http = new XMLHttpRequest();
-      http.open("POST", "form.php", true);
-      http.onreadystatechange = () => {
-        if (http.readyState == 4 && http.status == 200) {
-          location.href = "/";
+      const fields = Array.from(form.querySelectorAll("[name]"));
+      let validation = false;
+
+      fields.forEach(f => {
+        if (f.value.length === 0 || (f.type === "checkbox" && !f.checked)) {
+          f.classList.add("error");
+          validation = false;
+        } else {
+          f.classList.remove("error");
+          validation = true;
         }
-      };
-      http.send(SendData);
+      });
+
+      if (validation) {
+        http.open("POST", "form.php", true);
+        http.onreadystatechange = () => {
+          if (http.readyState == 4 && http.status == 200) {
+            alert("Success. Expect a response shortly.");
+          }
+        };
+        http.send(SendData);
+      }
     });
 
   const topBtn = document.querySelector(".top-btn span");
@@ -35,6 +50,15 @@ window.addEventListener("load", () => {
       }
     ]
   });
+
+  const sliderItems = Array.from(document.querySelectorAll(".adv"));
+
+  sliderItems.forEach(el => {
+    el.addEventListener("click", e => {
+      const index = el.getAttribute("data-slick-index");
+      $(".advantages").slick("slickGoTo", index);
+    });
+  });
 });
 
 const getWeather = async () => {
@@ -53,9 +77,4 @@ const setWeather = (temp, icon) => {
   const iconHolder = document.querySelector(".icon-holder");
   tempHolder.innerHTML = `${temp} ° C`;
   iconHolder.innerHTML = `<img src="http://openweathermap.org/img/w/${icon}.png" />`;
-  setTimeout(() => {
-    const dash = document.querySelector(".time").childNodes[2];
-
-    dash && dash.remove();
-  }, 100);
 };

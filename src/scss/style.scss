@@ -170,11 +170,12 @@ header {
     }
 
     .time {
-      *:not(span) {
-        display: none;
-      }
+      color: #fff;
       span {
         font-size: 14px;
+        color: #000;
+        display: block;
+        transform: translateY(-7px);
       }
     }
   }
@@ -182,6 +183,7 @@ header {
 
 section.main {
   margin-top: 45px;
+  overflow: hidden;
   position: relative;
 
   &:after {
@@ -285,14 +287,6 @@ section.main {
     justify-content: space-between;
   }
 
-  // &:not([dir="rtl"]) {
-  //   .adv {
-  //     display: flex !important;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //   }
-  // }
-
   .adv {
     border-radius: 3px;
     background-color: rgb(255, 255, 255);
@@ -303,10 +297,10 @@ section.main {
     justify-content: center;
     padding: 20px;
     color: #000;
-    transition: 0.5s;
     outline: none;
     cursor: pointer;
     margin: 0 5px;
+    transition: 0.3s;
 
     &:hover {
       @media (min-width: 768px) {
@@ -319,6 +313,7 @@ section.main {
     @media (min-width: $tablet) {
       width: 30%;
       margin: 0;
+      transition: none;
     }
 
     @media (min-width: $laptop) {
@@ -504,10 +499,8 @@ section.form {
     border-color: rgb(196, 199, 200);
     border-style: solid;
     border-radius: 10px;
-    height: 42px;
-    line-height: 43px;
     color: #1b232a;
-    padding: 0 15px;
+    padding: 10px 15px;
 
     &::-webkit-input-placeholder {
       color: #828a8f;
@@ -515,6 +508,10 @@ section.form {
 
     &:focus {
       border-color: rgb(27, 35, 42);
+    }
+
+    &.error {
+      border-color: #ff0038;
     }
   }
 
@@ -547,6 +544,14 @@ section.form {
         & + label {
           &:after {
             opacity: 1;
+          }
+        }
+      }
+
+      &.error {
+        & + label {
+          &:before {
+            border-color: #ff0038;
           }
         }
       }
