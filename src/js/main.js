@@ -24,7 +24,8 @@ window.addEventListener("load", () => {
         http.open("POST", "form.php", true);
         http.onreadystatechange = () => {
           if (http.readyState == 4 && http.status == 200) {
-            alert("Success. Expect a response shortly.");
+            form.classList.add("hidden");
+            document.querySelector(".ss").classList.add("active");
           }
         };
         http.send(SendData);

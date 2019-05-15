@@ -473,6 +473,12 @@ section.form {
   max-width: 405px;
   margin: 0 auto;
 
+  form {
+    &.hidden {
+      display: none;
+    }
+  }
+
   .row {
     &:not(:last-child) {
       margin-bottom: 17px;
@@ -511,7 +517,8 @@ section.form {
     }
 
     &.error {
-      border-color: #ff0038;
+      border-color: rgb(255, 0, 56);
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
     }
   }
 
@@ -717,4 +724,20 @@ html[dir="rtl"] .slick-slider .slick-track,
 html[dir="rtl"] .slick-slider .slick-list {
   direction: ltr;
   overflow: hidden;
+}
+
+.ss {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+  p {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #1b232a;
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: 700;
+  }
 }
