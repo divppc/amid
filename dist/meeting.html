@@ -28,11 +28,17 @@
         <div class="container">
           <form action="">
             <div class="row">
-              <input type="text" placeholder="Your name" name="Name" />
+              <input
+                type="text"
+                placeholder="Your name"
+                name="Name"
+                data-type="field"
+              />
               <input
                 type="text"
                 placeholder="City, Country"
                 name="City, Country"
+                data-type="field"
               />
             </div>
             <div class="row">
@@ -40,12 +46,14 @@
                 type="email"
                 placeholder="Your email address"
                 name="Email"
+                data-type="field"
               />
             </div>
             <div class="row">
               <textarea
                 placeholder="Briefly describe your business"
                 name="Message"
+                data-type="field"
               ></textarea>
             </div>
             <div class="disclaimer">
@@ -54,7 +62,7 @@
               permission to contact you.
             </div>
             <div class="agreement">
-              <input type="checkbox" id="agreement" name="agreement" />
+              <input type="checkbox" id="agreement" data-type="field" />
               <label for="agreement">Yes, go ahead.</label>
             </div>
             <div class="red-btn">

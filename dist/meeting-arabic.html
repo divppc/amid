@@ -28,8 +28,18 @@
         <div class="container">
           <form class="form">
             <div class="row">
-              <input type="text" placeholder="اسمك" name="Name" />
-              <input type="text" placeholder="مدينة بلد" name="City, Country" />
+              <input
+                type="text"
+                placeholder="اسمك"
+                name="Name"
+                data-type="field"
+              />
+              <input
+                type="text"
+                placeholder="مدينة بلد"
+                name="City, Country"
+                data-type="field"
+              />
             </div>
             <div class="row">
               <input
@@ -39,14 +49,18 @@
               />
             </div>
             <div class="row">
-              <textarea name="Message" placeholder="صف بإيجاز عملك"></textarea>
+              <textarea
+                name="Message"
+                placeholder="صف بإيجاز عملك"
+                data-type="field"
+              ></textarea>
             </div>
             <div class="disclaimer">
               <sup>*</sup> عن طريق تحديد موعد اجتماع ، أنت توافق على موقعنا
               <a href="#">سياسة خاصة</a> والعطاء<b>Amid</b> إذن للاتصال بك.
             </div>
             <div class="agreement">
-              <input type="checkbox" id="agreement" name="agreement" />
+              <input type="checkbox" id="agreement" data-type="field" />
               <label for="agreement">انطلق.</label>
             </div>
             <div class="red-btn">

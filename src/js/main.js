@@ -2,25 +2,32 @@ window.addEventListener("load", () => {
   document.querySelector(".time") && getWeather();
   const form = document.getElementsByTagName("form")[0];
 
+  const validate = fields => {
+    let validation = true;
+
+    fields.forEach(f => {
+      if (f.value.length === 0 || (f.type === "checkbox" && !f.checked)) {
+        f.classList.add("error");
+        validation *= false;
+      } else {
+        f.classList.remove("error");
+        validation *= true;
+      }
+    });
+
+    return validation;
+  };
+
   form &&
-    form.addEventListener("submit", e => {
+    form.addEventListener("submit", async e => {
       e.preventDefault();
       const SendData = new FormData(form);
       const http = new XMLHttpRequest();
-      const fields = Array.from(form.querySelectorAll("[name]"));
-      let validation = false;
+      const fields = Array.from(form.querySelectorAll('[data-type="field"]'));
 
-      fields.forEach(f => {
-        if (f.value.length === 0 || (f.type === "checkbox" && !f.checked)) {
-          f.classList.add("error");
-          validation = false;
-        } else {
-          f.classList.remove("error");
-          validation = true;
-        }
-      });
+      const isValid = await validate(fields);
 
-      if (validation) {
+      if (isValid) {
         http.open("POST", "form.php", true);
         http.onreadystatechange = () => {
           if (http.readyState == 4 && http.status == 200) {

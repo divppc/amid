@@ -28,19 +28,31 @@
         <div class="container">
           <form class="form">
             <div class="row">
-              <input type="text" placeholder="اسمك" name="Name" />
-              <input type="text" placeholder="مدينة بلد" name="City, Country" />
+              <input
+                type="text"
+                placeholder="اسمك"
+                name="Name"
+                data-type="field"
+              />
+              <input
+                type="text"
+                placeholder="مدينة بلد"
+                name="City, Country"
+                data-type="field"
+              />
             </div>
             <div class="row">
               <input
                 type="email"
                 placeholder="عنوان بريدك الإلكتروني"
                 name="Email"
+                data-type="field"
               />
             </div>
             <div class="row">
               <textarea
                 name="Message"
+                data-type="field"
                 placeholder="ما نوع العمل الذي تشترك فيه؟"
               ></textarea>
             </div>
@@ -49,7 +61,7 @@
               <a href="#">سياسة خاصة</a> والعطاء<b>Amid</b> إذن للاتصال بك.
             </div>
             <div class="agreement">
-              <input type="checkbox" id="agreement" name="agreement" />
+              <input type="checkbox" id="agreement" data-type="field" />
               <label for="agreement">انطلق.</label>
             </div>
             <div class="red-btn">
