@@ -235,6 +235,7 @@ section.main {
     @media (min-width: $laptop) {
       font-size: 56px;
       max-width: 560px;
+      transform: scale(0.95, 1) translateX(-15px);
     }
   }
 
