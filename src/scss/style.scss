@@ -710,6 +710,12 @@ html {
       }
     }
 
+    .adv {
+      & > * {
+        direction: rtl;
+      }
+    }
+
     .adv span {
       font-size: 16px;
       font-family: $db;
